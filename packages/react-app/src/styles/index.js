@@ -7,12 +7,13 @@ const styles = {
   exchangeContainer:
     "flex-1 flex justify-start items-center flex-col w-full mt-10",
   headTitle: "text-white font-poppins font-black text-5xl tracking-wide",
-  subTitle: "text-dim-white font-poppins font-medium mt-3 text-base",
+  subTitle: "text-white/70 font-poppins font-medium mt-3 text-base",
   exchangeBoxWrapper: "mt-10 w-full flex justify-center",
   exchangeBox:
     "relative md:max-w-[700px] md:min-w-[500px] min-w-full max-w-full gradient-border p-[2px] rounded-3xl",
   exchange:
-    "w-full min-h-[400px] bg-site-black backdrop-blur-[4px] rounded-3xl shadow-card flex p-10",
+  
+  "relative z-20 w-full min-h-[400px] bg-[#0f0e13] rounded-[24px] shadow-card flex p-10 overflow-hidden",
 
   // AmountIn & AmountOut
   amountContainer:
@@ -33,13 +34,14 @@ const styles = {
 
   // WalletButton
   walletButton:
-    "bg-site-pink border-none outline-none px-6 py-2 font-poppins font-bold text-lg text-white rounded-3xl leading-[24px] hover:bg-pink-600 transition-all",
+      "bg-pink-500 hover:bg-pink-600 border-none outline-none px-6 py-2 font-poppins font-bold text-lg text-white rounded-3xl leading-[24px] transition-all",
+
 
   // loader
   loader: "flex justify-center items-center flex-col w-full min-h-full",
   loaderImg: "w-56 h-56 object-contain",
   loaderText:
-    "font-poppins font-normal text-dim-white text-lg text-center mt-10",
+    "font-poppins font-normal text-white text-lg text-center mt-10",
 
   // balance
   balance: "w-full text-left mt-2 ml-2",

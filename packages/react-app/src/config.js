@@ -25,3 +25,4 @@ export const getProvider = () => {
   }
   return new ethers.providers.JsonRpcProvider(SEPOLIA_RPC_URL);
 };
+

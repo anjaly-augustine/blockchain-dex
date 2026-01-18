@@ -13,13 +13,13 @@ const Exchange = () => {
 
   const ammContract = new Contract(DEX_ADDRESS, AMMDexAbi);
 
-  // Hook for X → Y
+  
   const { state: stateXtoY, send: sendXtoY } =
     useContractFunction(ammContract, "swapXtoY", {
       transactionName: "Swap X to Y",
     });
 
-  // Hook for Y → X
+  
   const { state: stateYtoX, send: sendYtoX } =
     useContractFunction(ammContract, "swapYtoX", {
       transactionName: "Swap Y to X",

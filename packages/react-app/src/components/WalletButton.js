@@ -17,7 +17,7 @@ const WalletButton = () => {
     } else {
       setAccountAddress("")
     }
-  }, [account, ens])
+  },  [account, ens])
 
   return (
     <button

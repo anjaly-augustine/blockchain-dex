@@ -5,7 +5,7 @@ import { useCall } from "@usedapp/core";
 import { parseUnits } from "ethers/lib/utils";
 import { useEffect } from "react";
 
-import { ROUTER_ADDRESS } from "../config";
+import { DEX_ADDRESS } from "../config";
 
 export const getAvailableTokens = (pools) =>
   pools.reduce((prev, curr) => {
@@ -81,7 +81,7 @@ export const useAmountsOut = (pairAddress, amountIn, fromToken, toToken) => {
   const { error, value } =
     useCall(
       areParamsValid && {
-        contract: new Contract(ROUTER_ADDRESS, abis.router02),
+        contract: new Contract(DEX_ADDRESS, abis.router02),
         method: "getAmountsOut",
         args: [amountIn, [fromToken, toToken]],
       }

@@ -8,9 +8,9 @@ export const SEPOLIA_RPC_URL =
 // Deployed contract addresses
 export const TOKEN_X_ADDRESS = "0x70589a36ABdcF20a743aedcC770B1dd838651AC8";
 export const TOKEN_Y_ADDRESS = "0x89c64d66706FD5995a16821Da6B0e5fC4688Fbf9";
-export const DEX_ADDRESS     = "0x79e84dCBF7668B04565D4a8F970C067B2b59d101";
+export const DEX_ADDRESS     = "0xa8116c6A21BBd1c9aa43b54db6F20d2770a711ea";
 
-// ✅ useDApp config (THIS WAS MISSING)
+// useDApp config 
 export const DAPP_CONFIG = {
   readOnlyChainId: Sepolia.chainId,
   readOnlyUrls: {
@@ -18,7 +18,7 @@ export const DAPP_CONFIG = {
   },
 };
 
-// ✅ ethers v5 provider helper
+// ethers v5 provider helper
 export const getProvider = () => {
   if (window.ethereum) {
     return new ethers.providers.Web3Provider(window.ethereum);

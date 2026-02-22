@@ -71,10 +71,10 @@ const Exchange = () => {
           <p style={{ color: "#facc15" }}>Transaction Pending...</p>
         )}
         {currentState.status === "Success" && (
-          <p style={{ color: "#22c55e" }}>Swap Successful ✅</p>
+          <p style={{ color: "#22c55e" }}>Swap Successful</p>
         )}
         {currentState.status === "Exception" && (
-          <p style={{ color: "#ef4444" }}>Transaction Failed ❌</p>
+          <p style={{ color: "#ef4444" }}>Transaction Failed</p>
         )}
       </div>
     </div>

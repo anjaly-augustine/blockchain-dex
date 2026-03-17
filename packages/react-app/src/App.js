@@ -3,7 +3,7 @@ import { useEthers } from "@usedapp/core";
 
 import styles from "./styles";
 import { uniswapLogo } from "./assets";
-import { Exchange, Loader, WalletButton } from "./components";
+import { Exchange, Liquidity, Loader, WalletButton } from "./components";
 
 const App = () => {
   const { account } = useEthers();
@@ -27,13 +27,24 @@ const App = () => {
           <div className={styles.exchangeBoxWrapper}>
             <div className={styles.exchangeBox}>
               <div className="pink_gradient" />
+
               <div className={styles.exchange}>
                 {account ? (
-                  <Exchange />
+                  <>
+                    {/* Swap Section */}
+                    <Exchange />
+
+                    {/* Spacing */}
+                    <div style={{ marginTop: "25px" }} />
+
+                    {/* Liquidity Section */}
+                    <Liquidity />
+                  </>
                 ) : (
                   <Loader title="Please connect your wallet" />
                 )}
               </div>
+
               <div className="blue_gradient" />
             </div>
           </div>

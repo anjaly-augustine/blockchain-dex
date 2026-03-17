@@ -8,14 +8,14 @@ import { Exchange, Liquidity, Loader, WalletButton } from "./components";
 const App = () => {
   const { account } = useEthers();
 
-  // ✅ NEW: Tab State
+  
   const [activeTab, setActiveTab] = useState("swap");
 
   return (
     <div className={styles.container}>
       <div className={styles.innerContainer}>
 
-        {/* Header */}
+        
         <header className={styles.header}>
           <img
             src={logo}
@@ -38,7 +38,7 @@ const App = () => {
               <div className={styles.exchange}>
                 {account ? (
                   <>
-                    {/* ✅ NEW: Tabs */}
+                    
                     <div
                       style={{
                         display: "flex",
@@ -86,7 +86,7 @@ const App = () => {
                       </button>
                     </div>
 
-                    {/* ✅ CONDITIONAL RENDER */}
+                   
                     {activeTab === "swap" ? (
                       <Exchange />
                     ) : (

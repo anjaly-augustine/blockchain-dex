@@ -136,7 +136,7 @@ const Exchange = () => {
     { transactionName: "Swap Y to X" }
   );
 
-  /* ✅ DEFINE BEFORE useEffect */
+  
   const currentState = isXtoY ? stateXtoY : stateYtoX;
 
   /* -------------------- CLEAR INPUT LOGIC -------------------- */
@@ -215,6 +215,16 @@ const Exchange = () => {
       </div>
     );
   }
+
+
+
+
+
+
+
+
+
+  
 
   /* -------------------- UI -------------------- */
 

@@ -19,7 +19,7 @@ input[type="number"] {
 #root {
   width: 100%;
   height: 100%;
-  background-color: #1a0033; /* dark violet */
+  background-color: #0f172a; /* tailwind slate-900 */
 }
 
 .gradient_btn {

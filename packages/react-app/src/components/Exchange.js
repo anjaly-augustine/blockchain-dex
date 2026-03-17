@@ -140,6 +140,25 @@ const Exchange = () => {
     { transactionName: "Swap Y to X" }
   );
 
+  /* ✅ DEFINE BEFORE useEffect */
+  const currentState = isXtoY ? stateXtoY : stateYtoX;
+
+  /* -------------------- CLEAR INPUT LOGIC -------------------- */
+
+  useEffect(() => {
+    if (currentState.status === "Success") {
+      setAmount("");
+    }
+  }, [currentState.status]);
+
+  useEffect(() => {
+    if (approveState.status === "Success") {
+      setAmount("");
+    }
+  }, [approveState.status]);
+
+  /* -------------------- HANDLERS -------------------- */
+
   const handleSwap = () => {
     if (!amount || !account) return;
 
@@ -152,7 +171,10 @@ const Exchange = () => {
     }
   };
 
-  const currentState = isXtoY ? stateXtoY : stateYtoX;
+  const handleSwitch = () => {
+    setIsXtoY(!isXtoY);
+    setAmount("");
+  };
 
   /* -------------------- PRICE + ESTIMATION -------------------- */
 
@@ -186,7 +208,7 @@ const Exchange = () => {
     }
   }
 
-  /* -------------------- LOADING SAFETY -------------------- */
+  /* -------------------- LOADING -------------------- */
 
   if (!ammContract || !reserveX || !reserveY) {
     return (
@@ -218,10 +240,7 @@ const Exchange = () => {
         style={styles.input}
       />
 
-      <button
-        onClick={() => setIsXtoY(!isXtoY)}
-        style={styles.toggle}
-      >
+      <button onClick={handleSwitch} style={styles.toggle}>
         ⇅ Switch
       </button>
 
@@ -239,19 +258,13 @@ const Exchange = () => {
       </div>
 
       {needsApproval ? (
-        <button
-          onClick={handleApprove}
-          style={styles.button}
-        >
+        <button onClick={handleApprove} style={styles.button}>
           {approveState.status === "Mining"
             ? "Approving..."
             : "Approve"}
         </button>
       ) : (
-        <button
-          onClick={handleSwap}
-          style={styles.button}
-        >
+        <button onClick={handleSwap} style={styles.button}>
           {currentState.status === "Mining"
             ? "Swapping..."
             : "Swap"}

@@ -1,6 +1,6 @@
 const styles = {
   // App.js
-  container: "flex justify-center min-h-screen sm:px-16 px-6 bg-site-black",
+  container: "flex justify-center min-h-screen sm:px-16 px-6 bg-slate-900",
   innerContainer:
     "flex justify-between items-center flex-col max-w-[1280px] w-full",
   header: "flex flex-row justify-between items-center w-full sm:py-10 py-6",
@@ -17,15 +17,15 @@ const styles = {
 
   // AmountIn & AmountOut
   amountContainer:
-    "flex justify-between items-center flex-row w-full min-w-full bg-site-dim border-[1px] border-transparent hover:border-site-dim2 min-h-[96px] sm:p-8 p-4 rounded-[20px]",
+    "flex justify-between items-center flex-row w-full min-w-full bg-slate-800 border-[1px] border-transparent hover:border-slate-700 min-h-[96px] sm:p-8 p-4 rounded-[20px]",
   amountInput:
     "w-full flex-1 bg-transparent outline-none font-poppins font-black text-2xl text-white",
   currencyButton:
-    "flex flex-row items-center bg-site-dim2 py-2 px-4 rounded-xl font-poppins font-bold text-white",
+    "flex flex-row items-center bg-slate-700 py-2 px-4 rounded-xl font-poppins font-bold text-white",
   currencyList:
-    "absolute z-10 right-0 bg-site-black border-[1px] border-site-dim2 w-full mt-2 rounded-lg min-w-[170px] overflow-hidden",
+    "absolute z-10 right-0 bg-slate-900 border-[1px] border-slate-700 w-full mt-2 rounded-lg min-w-[170px] overflow-hidden",
   currencyListItem:
-    "font-poppins font-medium text-base text-white hover:text-dim-white px-5 py-3 hover:bg-site-dim2 cursor-pointer",
+    "font-poppins font-medium text-base text-white hover:text-slate-300 px-5 py-3 hover:bg-slate-700 cursor-pointer",
 
   // Exchange
   actionButton:
@@ -34,7 +34,7 @@ const styles = {
 
   // WalletButton
   walletButton:
-      "bg-pink-500 hover:bg-pink-600 border-none outline-none px-6 py-2 font-poppins font-bold text-lg text-white rounded-3xl leading-[24px] transition-all",
+      "bg-gradient-to-r from-indigo-500 to-blue-600 hover:from-indigo-600 hover:to-blue-700 border-none outline-none px-6 py-2 font-poppins font-bold text-lg text-white rounded-3xl leading-[24px] transition-all",
 
 
   // loader
@@ -45,7 +45,7 @@ const styles = {
 
   // balance
   balance: "w-full text-left mt-2 ml-2",
-  balanceText: "font-poppins font-normal text-dim-white",
+  balanceText: "font-poppins font-normal text-slate-300",
   balanceBold: "font-semibold text-white",
 };
 

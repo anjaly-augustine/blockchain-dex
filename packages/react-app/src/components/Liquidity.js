@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useEthers, useContractFunction, useCall } from "@usedapp/core";
 import { Contract } from "@ethersproject/contracts";
 import { utils } from "ethers";
@@ -95,6 +95,21 @@ const Liquidity = () => {
     sendRemoveLiquidity(amount);
   };
 
+  /* -------------------- CLEAR INPUT LOGIC -------------------- */
+
+  useEffect(() => {
+    if (addState.status === "Success") {
+      setAmountX("");
+      setAmountY("");
+    }
+  }, [addState.status]);
+
+  useEffect(() => {
+    if (removeState.status === "Success") {
+      setRemoveAmount("");
+    }
+  }, [removeState.status]);
+
   /* -------------------- LOADING -------------------- */
 
   if (!ammContract || !reserveX || !reserveY) {
@@ -146,10 +161,7 @@ const Liquidity = () => {
         style={styles.input}
       />
 
-      <button
-        onClick={handleAddLiquidity}
-        style={styles.button}
-      >
+      <button onClick={handleAddLiquidity} style={styles.button}>
         {addState.status === "Mining"
           ? "Adding..."
           : "Add Liquidity"}
@@ -167,10 +179,7 @@ const Liquidity = () => {
         style={styles.input}
       />
 
-      <button
-        onClick={handleRemoveLiquidity}
-        style={styles.button}
-      >
+      <button onClick={handleRemoveLiquidity} style={styles.button}>
         {removeState.status === "Mining"
           ? "Removing..."
           : "Remove Liquidity"}

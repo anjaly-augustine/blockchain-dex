@@ -1,9 +1,5 @@
 import React, { useState, useEffect } from "react";
-import {
-  useEthers,
-  useContractFunction,
-  useCall,
-} from "@usedapp/core";
+import {useEthers,useContractFunction,useCall} from "@usedapp/core";
 import { Contract } from "@ethersproject/contracts";
 import { utils } from "ethers";
 

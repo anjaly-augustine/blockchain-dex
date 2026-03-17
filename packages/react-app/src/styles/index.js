@@ -1,19 +1,18 @@
 const styles = {
   // App.js
-  container: "flex justify-center min-h-screen sm:px-16 px-6 bg-slate-900",
+  container: "flex justify-center items-center h-screen sm:px-16 px-6 bg-slate-900",
   innerContainer:
-    "flex justify-between items-center flex-col max-w-[1280px] w-full",
-  header: "flex flex-row justify-between items-center w-full sm:py-10 py-6",
+  "flex justify-center items-center flex-col max-w-[1280px] w-full",
+  header: "flex flex-row justify-between items-center w-full py-3",
   exchangeContainer:
-    "flex-1 flex justify-start items-center flex-col w-full mt-10",
+  "flex flex-col justify-center items-center w-full mt-2",
   headTitle: "text-white font-poppins font-black text-5xl tracking-wide",
   subTitle: "text-white/70 font-poppins font-medium mt-3 text-base",
   exchangeBoxWrapper: "mt-10 w-full flex justify-center",
   exchangeBox:
     "relative md:max-w-[700px] md:min-w-[500px] min-w-full max-w-full gradient-border p-[2px] rounded-3xl",
   exchange:
-  
-  "relative z-20 w-full min-h-[400px] bg-[#0f0e13] rounded-[24px] shadow-card flex p-10 overflow-hidden",
+    "relative z-20 w-full bg-[#0f0e13] rounded-[24px] shadow-card flex flex-col p-6 overflow-hidden",
 
   // AmountIn & AmountOut
   amountContainer:

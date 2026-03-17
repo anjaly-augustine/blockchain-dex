@@ -33,7 +33,7 @@ const styles = {
 
   // WalletButton
   walletButton:
-      "bg-gradient-to-r from-indigo-500 to-blue-600 hover:from-indigo-600 hover:to-blue-700 border-none outline-none px-6 py-2 font-poppins font-bold text-lg text-white rounded-3xl leading-[24px] transition-all",
+  "bg-gradient-to-r from-[#00d2ff] to-[#3a7bd5] hover:from-[#00c6ff] hover:to-[#0072ff] border-none outline-none px-6 py-2 font-poppins font-bold text-lg text-white rounded-3xl leading-[24px] transition-all duration-300 shadow-[0_0_15px_rgba(0,210,255,0.3)] hover:shadow-[0_0_25px_rgba(0,210,255,0.5)]",
 
 
   // loader
